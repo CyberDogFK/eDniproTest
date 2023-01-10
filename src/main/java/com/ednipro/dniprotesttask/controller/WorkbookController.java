@@ -5,6 +5,7 @@ import com.ednipro.dniprotesttask.service.PdfService;
 import com.ednipro.dniprotesttask.service.StorageService;
 import com.ednipro.dniprotesttask.service.WorkbookService;
 import io.swagger.annotations.ApiOperation;
+import java.util.List;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
@@ -14,8 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/workbook")
 public class WorkbookController {
@@ -23,7 +22,9 @@ public class WorkbookController {
     private final PdfService pdfService;
     private final StorageService storageService;
 
-    public WorkbookController(WorkbookService workbookService, PdfService pdfService, StorageService storageService) {
+    public WorkbookController(WorkbookService workbookService,
+                              PdfService pdfService,
+                              StorageService storageService) {
         this.workbookService = workbookService;
         this.pdfService = pdfService;
         this.storageService = storageService;

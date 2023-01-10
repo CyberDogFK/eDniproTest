@@ -1,0 +1,17 @@
+databaseChangeLog:
+  - include:
+      file: /db/changelog/changes/tables/create-cell-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-line-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-line-cells-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-sheet-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-sheet-line-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-users-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-workbook-table.sql
+  - include:
+      file: /db/changelog/changes/tables/create-workbook-sheets-table.sql

@@ -3,9 +3,8 @@ package com.ednipro.dniprotesttask.service.impl;
 import com.ednipro.dniprotesttask.model.WorkbookModel;
 import com.ednipro.dniprotesttask.repository.WorkbookRepository;
 import com.ednipro.dniprotesttask.service.WorkbookService;
-import org.springframework.stereotype.Service;
-
 import java.util.List;
+import org.springframework.stereotype.Service;
 
 @Service
 public class WorkbookServiceImpl implements WorkbookService {

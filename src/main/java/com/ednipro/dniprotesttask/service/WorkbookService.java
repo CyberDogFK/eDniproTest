@@ -1,7 +1,6 @@
 package com.ednipro.dniprotesttask.service;
 
 import com.ednipro.dniprotesttask.model.WorkbookModel;
-
 import java.util.List;
 
 public interface WorkbookService {

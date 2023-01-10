@@ -38,7 +38,8 @@ public class FileUploadController {
 
     @PostMapping("/upload")
     @ResponseBody
-    @ApiOperation("Take post request with excel file, rework it to pdf, and save data from it to db,"
+    @ApiOperation("Take post request with excel file, "
+            + "rework it to pdf, and save data from it to db,"
             + " and return pdf file for downloading")
     public ResponseEntity<Resource> uploadFile(@RequestParam("file") MultipartFile file) {
         try {

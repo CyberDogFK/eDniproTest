@@ -76,7 +76,7 @@ public class StorageServiceImpl implements StorageService {
 
     public Resource reworkExcelToPdf(MultipartFile file) {
         save(file);
-        WorkbookModel workbookModel = xlsFileService.saveWorkbookToDb(file.getOriginalFilename());
+        WorkbookModel workbookModel = xlsFileService.saveWorkbookToDb("uploads/" + file.getOriginalFilename());
         System.out.println(workbookModel.getId());
         WorkbookModel wmodel = workbookService.getById(workbookModel.getId());
         String s = pdfService.makePdfFromWorkbook(wmodel);

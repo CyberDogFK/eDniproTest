@@ -6,6 +6,8 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.util.List;
@@ -22,5 +24,8 @@ public class WorkbookModel {
     private Long id;
     private String name;
     @OneToMany(cascade = CascadeType.PERSIST, fetch = FetchType.EAGER)
+    @JoinTable(name = "workbook_sheets",
+            joinColumns = @JoinColumn(name = "workbook_id"),
+            inverseJoinColumns = @JoinColumn(name = "sheet_id"))
     private List<SheetModel> sheetModels;
 }

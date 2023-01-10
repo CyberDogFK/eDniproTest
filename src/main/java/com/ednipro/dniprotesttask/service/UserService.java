@@ -1,8 +1,6 @@
 package com.ednipro.dniprotesttask.service;
 
-
 import com.ednipro.dniprotesttask.model.User;
-
 import java.util.Optional;
 
 public interface UserService {

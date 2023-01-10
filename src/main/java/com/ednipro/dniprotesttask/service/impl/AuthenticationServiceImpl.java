@@ -5,8 +5,6 @@ import com.ednipro.dniprotesttask.service.AuthenticationService;
 import com.ednipro.dniprotesttask.service.UserService;
 import org.springframework.stereotype.Service;
 
-import java.util.Set;
-
 @Service
 public class AuthenticationServiceImpl implements AuthenticationService {
     private final UserService userService;

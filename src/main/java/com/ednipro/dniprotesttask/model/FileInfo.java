@@ -8,6 +8,6 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 public class FileInfo {
-  private String name;
-  private String url;
+    private String name;
+    private String url;
 }

@@ -1,5 +1,7 @@
 package com.ednipro.dniprotesttask.service.impl;
 
+import static org.springframework.security.core.userdetails.User.withUsername;
+
 import com.ednipro.dniprotesttask.model.User;
 import com.ednipro.dniprotesttask.service.UserService;
 import org.springframework.security.core.userdetails.User.UserBuilder;
@@ -7,8 +9,6 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-
-import static org.springframework.security.core.userdetails.User.withUsername;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {

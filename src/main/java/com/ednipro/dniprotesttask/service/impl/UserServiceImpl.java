@@ -3,10 +3,9 @@ package com.ednipro.dniprotesttask.service.impl;
 import com.ednipro.dniprotesttask.model.User;
 import com.ednipro.dniprotesttask.repository.UserRepository;
 import com.ednipro.dniprotesttask.service.UserService;
+import java.util.Optional;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
-
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements UserService {

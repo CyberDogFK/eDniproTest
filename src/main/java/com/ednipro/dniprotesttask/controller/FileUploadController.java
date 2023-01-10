@@ -1,6 +1,7 @@
 package com.ednipro.dniprotesttask.controller;
 
 import com.ednipro.dniprotesttask.service.StorageService;
+import io.swagger.annotations.ApiOperation;
 import jakarta.annotation.PostConstruct;
 import org.springframework.core.io.Resource;
 import org.springframework.http.HttpHeaders;
@@ -28,6 +29,7 @@ public class FileUploadController {
 
     @RequestMapping("/")
     @ResponseBody
+    @ApiOperation("Redirect user to html page with pretty form for upload file ")
     public ModelAndView listUploadedFiles() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.setViewName("uploadForm");
@@ -36,6 +38,8 @@ public class FileUploadController {
 
     @PostMapping("/upload")
     @ResponseBody
+    @ApiOperation("Take post request with excel file, rework it to pdf, and save data from it to db,"
+            + " and return pdf file for downloading")
     public ResponseEntity<Resource> uploadFile(@RequestParam("file") MultipartFile file) {
         try {
             Resource pdfFile = storageService.reworkExcelToPdf(file);

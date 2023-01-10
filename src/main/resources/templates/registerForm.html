@@ -1,0 +1,21 @@
+<html xmlns:th="https://www.thymeleaf.org">
+<body>
+
+<div>
+    <form action="/register" method="post">
+        <table>
+            <tr>
+                <td>
+                    <input type="text" name="email" th:for="email" required>
+                </td>
+                <td>
+                    <input type="password" name="password" th:for="password" required>
+                </td>
+            </tr>
+            <tr><td></td><td><input type="submit" value="Register" /></td></tr>
+        </table>
+    </form>
+</div>
+
+</body>
+</html>

@@ -45,6 +45,18 @@ I really hope we can meet and discuss the best way of calculating this logic.
 
 ## How to start
 
+If you have docker, in terminal:
+1. Download repo to you computer
+2. Use
+````
+./mvnw clean package
+````
+3. Use
+````
+docker-compose up
+````
+
+If not:
 1. Download repo to you computer
 2. Change 
 src/main/resources/application.properties

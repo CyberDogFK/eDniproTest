@@ -68,7 +68,7 @@ public class XlsFileReaderServiceImpl implements XlsFileReaderService {
                 sheetModels.add(pageDto);
             }
             book.setName(filePath.substring(filePath.indexOf('/') + 1));
-            book.setSheetModels(List.copyOf(sheetModels));
+            book.setSheetModels(sheetModels);
             return book;
         } catch (IOException e) {
             throw new RuntimeException(e);

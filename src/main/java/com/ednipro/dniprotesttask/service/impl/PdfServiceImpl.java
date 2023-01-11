@@ -21,7 +21,6 @@ public class PdfServiceImpl implements PdfService {
         Document document = null;
         String fileName = workbookModel.getName().substring(0,
                 workbookModel.getName().indexOf(".")) + ".pdf";
-        System.out.println(fileName);
         try {
             document = new Document();
             PdfWriter.getInstance(document, new FileOutputStream("uploads/" + fileName));

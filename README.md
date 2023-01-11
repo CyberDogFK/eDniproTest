@@ -21,6 +21,7 @@ and save all data to Database.
 - Lombok
 - Swagger
 - Liquibase
+- Docker
 
 ## Project Structure
 
@@ -40,11 +41,6 @@ I use N-tier architecture.
 - Downloading in pdf
 - Registration and logging with token
 
-## What goes wrong
-
-- I didn't have time for finish changes story
-I really hope we can meet and discuss the best way of calculating this logic.
-
 ## How to start
 
 If you have docker, in terminal:
@@ -53,7 +49,7 @@ If you have docker, in terminal:
 ````
 ./mvnw clean package
 ````
-3. Use
+3. Use, and wait booting
 ````
 docker-compose up
 ````
@@ -67,5 +63,5 @@ src/main/resources/application.properties
 ```
 ./mvnw spring-boot:run
 ```` 
-in command line, from directory
+in command line, from directory.
 4. Register and have fun

@@ -11,4 +11,6 @@ public interface WorkbookRepository extends JpaRepository<WorkbookModel, Long> {
             + "join rm.cellModels cm "
             + "where cm.value = ?1")
     List<WorkbookModel> findByCell(String info);
+
+    List<WorkbookModel> findByName(String name);
 }

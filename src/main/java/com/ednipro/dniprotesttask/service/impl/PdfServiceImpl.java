@@ -19,13 +19,15 @@ import org.springframework.stereotype.Service;
 public class PdfServiceImpl implements PdfService {
     public String makePdfFromWorkbook(WorkbookModel workbookModel) {
         Document document = null;
+        String fileName = workbookModel.getName().substring(0,
+                workbookModel.getName().indexOf(".")) + ".pdf";
+        System.out.println(fileName);
         try {
             document = new Document();
-            PdfWriter.getInstance(document, new FileOutputStream("uploads/iText.pdf"));
+            PdfWriter.getInstance(document, new FileOutputStream("uploads/" + fileName));
             document.open();
             document.add(new Chunk());
             List<SheetModel> sheetModels = workbookModel.getSheetModels();
-            System.out.println(sheetModels);
             for (SheetModel sheet : sheetModels) {
                 document.add(createPdfTableFromModel(sheet));
                 document.newPage();
@@ -37,7 +39,7 @@ public class PdfServiceImpl implements PdfService {
                 document.close();
             }
         }
-        return "iText.pdf";
+        return fileName;
     }
 
     private PdfPTable createPdfTableFromModel(SheetModel sheet) {

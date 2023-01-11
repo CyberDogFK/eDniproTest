@@ -27,6 +27,11 @@ public class WorkbookServiceImpl implements WorkbookService {
     }
 
     @Override
+    public List<WorkbookModel> getHistoryOf(Long id) {
+        return workbookRepository.findByName(getById(id).getName());
+    }
+
+    @Override
     public WorkbookModel save(WorkbookModel book) {
         return workbookRepository.save(book);
     }

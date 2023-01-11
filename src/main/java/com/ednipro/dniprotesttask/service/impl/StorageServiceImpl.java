@@ -63,7 +63,6 @@ public class StorageServiceImpl implements StorageService {
         try {
             Path file = root.resolve(filename);
             Resource resource = new UrlResource(file.toUri());
-
             if (resource.exists() || resource.isReadable()) {
                 return resource;
             } else {
@@ -78,7 +77,6 @@ public class StorageServiceImpl implements StorageService {
         save(file);
         WorkbookModel workbookModel = xlsFileService.saveWorkbookToDb("uploads/"
                 + file.getOriginalFilename());
-        System.out.println(workbookModel.getId());
         WorkbookModel wmodel = workbookService.getById(workbookModel.getId());
         String s = pdfService.makePdfFromWorkbook(wmodel);
         return load(s);

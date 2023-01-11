@@ -4,10 +4,12 @@
 
 This is an API, for work with Excel files, rework it to PDF, 
 and save all data to Database.
-- For beginning work, go to /register, register, and use you email and password, for entering.
-- Upload you excel and take pdf.
-- And you can find the table, by information from cell. use /workbook?with={you looking value}, and you can see all tables, what contains similar info
-- Download table in pdf what contains in DB by id, use /workbook/{id of table what you're looking for}
+- For beginning work, go to ```/register```, register, and use you email and password, for entering.
+- Upload you excel and take pdf on endpoin ```/```.
+- And you can find the table, by information from cell. use ```/workbook?with={you looking value}```, and you can see all tables, what contains similar info
+- Download table in pdf what contains in DB by id, use ```/workbook/{id}``` of table what you're looking for}
+- See history of any table(with the same name), by endpoint 
+```/{id}/history```
 
 ## Technologies
 

@@ -9,4 +9,6 @@ public interface WorkbookService {
     WorkbookModel save(WorkbookModel book);
 
     List<WorkbookModel> getWithCell(String info);
+
+    List<WorkbookModel> getHistoryOf(Long id);
 }

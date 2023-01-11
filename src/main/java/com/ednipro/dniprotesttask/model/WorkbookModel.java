@@ -10,6 +10,9 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.JoinTable;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 import lombok.Getter;
 import lombok.Setter;
@@ -28,4 +31,5 @@ public class WorkbookModel {
             joinColumns = @JoinColumn(name = "workbook_id"),
             inverseJoinColumns = @JoinColumn(name = "sheet_id"))
     private List<SheetModel> sheetModels;
+    private LocalDateTime savingDateTime;
 }

@@ -8,6 +8,7 @@ import com.ednipro.dniprotesttask.service.WorkbookService;
 import com.ednipro.dniprotesttask.service.XlsFileReaderService;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -32,6 +33,7 @@ public class XlsFileReaderServiceImpl implements XlsFileReaderService {
 
     private WorkbookModel readWorkbook(String filePath) {
         WorkbookModel book = new WorkbookModel();
+        book.setSavingDateTime(LocalDateTime.now());
 
         List<RowModel> rows = new ArrayList<>();
         List<SheetModel> sheetModels = new ArrayList<>();

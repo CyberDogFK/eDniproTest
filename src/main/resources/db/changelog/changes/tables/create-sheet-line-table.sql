@@ -7,6 +7,6 @@ CREATE TABLE `sheet_line` (
                               KEY `FK8m2mvm226ll63hjwhbtk9w0qm` (`sheet_id`),
                               CONSTRAINT `FK8kdtfivswxmoqc8k5cb36ag94` FOREIGN KEY (`line_id`) REFERENCES `line` (`id`),
                               CONSTRAINT `FK8m2mvm226ll63hjwhbtk9w0qm` FOREIGN KEY (`sheet_id`) REFERENCES `sheet` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --rollback DROP TABLE `sheet_line`;

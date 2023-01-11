@@ -7,6 +7,6 @@ CREATE TABLE `workbook_sheets` (
                                    KEY `FKnamg549x8vlpjcg6sieydqq3d` (`workbook_id`),
                                    CONSTRAINT `FKl7f1rrnqirm8s8bfrdatitcra` FOREIGN KEY (`sheet_id`) REFERENCES `sheet` (`id`),
                                    CONSTRAINT `FKnamg549x8vlpjcg6sieydqq3d` FOREIGN KEY (`workbook_id`) REFERENCES `workbook` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --rollback DROP TABLE `workbook_sheets`;
